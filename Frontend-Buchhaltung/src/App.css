@@ -1,0 +1,50 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+  column-gap: 50px;
+  row-gap: 50px;
+  grid-template-columns: auto auto;
+  /* border: 3px solid blue; */
+}
+#gridItem1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.radioButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Hier wird der Abstand zwischen den direkten Kindern festgelegt */
+  margin-bottom: 10px;
+}
+
+/* Media Query für Bildschirmbreite kleiner als 768px */
+@media (max-width: 868px) {
+  #root {
+    grid-template-columns: 1fr; /* Eine Spalte für schmale Bildschirme */
+    column-gap: 0; /* Kein Abstand zwischen den Spalten */
+  }
+
+  #gridItem1 {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+  #form {
+    max-width: 95%;
+  }
+}
